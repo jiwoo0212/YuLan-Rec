@@ -59,7 +59,7 @@ class Data:
         """
         Load items from local file.
         """
-        with open(file_path, "r", newline="") as file:
+        with open(file_path, "r", newline="", encoding='UTF8') as file:
             reader = csv.reader(file)
             next(reader)  # Skip the header line
             for row in reader:
